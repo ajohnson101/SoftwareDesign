@@ -11,6 +11,5 @@ def compare(x,y):
     elif(x == y):
         print 0
     else:
-        print -1
-        
+        print -1        
 compare(1,2)
