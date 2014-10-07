@@ -93,8 +93,6 @@ def remap_interval(val, input_interval_start, input_interval_end, output_interva
    Maps the input value that is in the interval [input_interval_start, input_interval_end]
    to the output interval [output_interval_start, output_interval_end].  The mapping
    is an affine one (i.e. output = input*c + b).
-    
-   TODO: please fill out the rest of this docstring
    """
    # your code goes here
    magic = (val - input_interval_start) * (1.0 / (input_interval_end - input_interval_start)) * (output_interval_end - output_interval_start) - output_interval_start
@@ -103,6 +101,11 @@ def remap_interval(val, input_interval_start, input_interval_end, output_interva
 
 
 def pretty_pictures():
+   """
+   Mapped out the pixels from range 0 to 350 to -1 to 1 and then from -1 to 255 in order to fit for the RGB scale.
+   The function does this by calling evaluate_random_function and remap_interval.  Lastly, it saves the image as
+   a .png file.
+   """
    
    im = Image.new("RGB",(350,350))
 
@@ -130,15 +133,6 @@ def pretty_pictures():
    im.save("my_art"+".png")
 
 
-
-
-
-
-
-
-
-
-    
 
 if __name__=="__main__":
    f = build_random_function(2,6,0)
